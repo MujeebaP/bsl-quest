@@ -32,7 +32,7 @@ To install the APK on your Android device, you can transfer the file by any pref
 
 
 ## Option 2: Via Distribution List
-If methods fail to allow you to access the BSL Quest app, please do not hesitate to get in touch with me directly at [ec21553@qmul.ac.uk](mailto:ec21553@qmul.ac.uk). You can email me to request inclusion in the app distribution list. As a member of this list, you will receive an email invitation through Google Cloud Platform's Firebase App Distribution service. This invitation will provide you with a link to download and install the BSL Quest APK directly onto your Android device. The Firebase App Distribution service facilitates a smoother installation process and ensures that you receive the latest version of the app and is the PREFERRED method. I was unable to add this link here due to expiry reasons.
+If methods fail to allow you to access the BSL Quest app, please do not hesitate to get in touch with me directly at [ec21553@qmul.ac.uk](mailto:ec21553@qmul.ac.uk). You can email me to request inclusion in the app distribution list. As a member of this list, you will receive an email invitation through Google Cloud Platform's Firebase App Distribution service. This invitation will provide you with a link to download and install the BSL Quest APK directly onto your Android device. The Firebase App Distribution service facilitates a smoother installation process and ensures that you receive the latest version of the app. I was unable to add this link here due to expiry reasons.
 
 ## Option 3: Via Google Drive
 1. Download the APK from the Google Drive link: [BSL Quest APK](https://drive.google.com/file/d/12dnmOdi_wnsp_3vajd_CFDQg-mPTnHlC/view?usp=sharing)
