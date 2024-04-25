@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "942118952638",
+    "project_id": "bslquest",
+    "storage_bucket": "bslquest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942118952638:android:2f6f50f14fec62573148ef",
+        "android_client_info": {
+          "package_name": "bslquest.firebaseapp.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXW1-_BKJKo0IEmzdc4UYef-Me5mbBAVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942118952638:android:3ede06c1df5d698d3148ef",
+        "android_client_info": {
+          "package_name": "com.gmail.mujeeba03.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXW1-_BKJKo0IEmzdc4UYef-Me5mbBAVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

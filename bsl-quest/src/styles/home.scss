@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+// @media only screen and (max-width: 768px) { /* Ensures responsiveness for majority of mobile devices - excludes tablets*/
+
+  body, html {
+    overflow-x: hidden; // prevents horizontal scrolling
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  body.home-background {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw; 
+    height: 100vh; 
+    font-family: 'DM Sans', sans-serif;
+    background-color: #F5F8FA;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+  }
+
+  body.home-background::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 33%;
+    background: linear-gradient(#6FB0F8, #6FB0F8);
+    // border-bottom-left-radius: 4em; 
+    // border-bottom-right-radius: 4em;
+    border-bottom-left-radius: 50% 20%; /* Playful curve */
+    border-bottom-right-radius: 50% 20%;
+    z-index: -1;
+  }
+
+  /* the main container element */
+  .UniqueHomecontainer {
+    width: 65vw;
+    height: 70vh; 
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* cards style*/
+  input[type=radio] {
+    display: none;
+  }
+  /* the cards container */
+  .UniqueCard {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-bottom: 10%;
+    margin-top: -10%;
+    transition: transform .4s ease;
+    cursor: pointer;
+    background: white;
+    padding: 1.2em;
+    border-radius: 1em;
+    box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.1);
+  }
+
+  .card-content {
+    margin-top: 10%;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .card-image {
+  max-width: 70%;
+    height: auto;
+    margin: 2em 0;
+    display: block;
+    margin-left: 17%;
+  }
+
+  .card-buttons {
+    position: absolute;
+    width: 80%;
+    bottom: 15%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5em;
+  }
+
+  .learn-btn, .quiz-btn {
+    font-family: 'DM Sans', sans-serif;
+    padding: 1.2em 1.5em; 
+    background-color: #3495eb;
+    color: white;
+    font-size: 0.9em;
+    appearance: none;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    touch-action: manipulation; // Disables double-tap to zoom on mobile devices
+    transform: translateZ(0); // Ensures the button is rendered on its own layer on mobile devices
+    transition: filter .2s;
+    user-select: none; // Disables text selection on the button
+    vertical-align: middle;
+  
+    &:after {
+        background-clip: padding-box; // background is limited to the padding box
+        background-color: lighten(#3495eb, 10%);
+        border: solid transparent;
+        border-radius: 1em;
+        border-width: 0 0 0.3em;
+        bottom: -0.3em;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &:active {
+        border-width: 0.3em 0 0;
+        background: none;
+    }
+  }
+
+  .chat-btn{
+      font-family: 'DM Sans', sans-serif;
+      padding: 1.2em 1.5em; 
+      background-color: #3495eb;
+      color: white;
+      font-size: 0.9em;
+      appearance: none;
+      border: solid transparent;
+      border-radius: 16px;
+      border-width: 0 0 4px;
+      box-sizing: border-box;
+      margin-bottom: 43%;
+      cursor: pointer;
+      text-align: center;
+      touch-action: manipulation; // Disables double-tap to zoom on mobile devices
+      transform: translateZ(0); // Ensures the button is rendered on its own layer on mobile devices
+      transition: filter .2s;
+      user-select: none; // Disables text selection on the button
+      vertical-align: middle;
+    
+      &:after {
+          background-clip: padding-box; // background is limited to the padding box
+          background-color: lighten(#3495eb, 10%);
+          border: solid transparent;
+          border-radius: 1em;
+          border-width: 0 0 0.3em;
+          bottom: -0.3em;
+          content: "";
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: -1;
+  
+      &:active {
+          border-width: 0.3em 0 0;
+          background: none;
+      }
+    }
+  }
+  /* The users xp */
+  .xp-container {
+    position: absolute;
+    top: 3.5%;
+    left: 21%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: #FFFFFF;
+    color: #3495eb;
+    padding: 0.3em 0.5em;
+    border-radius: 17px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 5;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  // animations to make the cards move from left to right
+  @for $i from 1 through 6 {
+    #item-#{$i}:checked ~ .cards #card-#{$i} {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        z-index: 2;
+    }
+    
+    @for $j from 1 through 6 {
+        @if $j > $i {
+            #item-#{$i}:checked ~ .cards #card-#{$j} {
+                transform: translateX(110% * ($j - $i)) scale(1 - 0.1 * ($j - $i));
+                opacity: 1 - 0.2 * ($j - $i);
+                z-index: 2 - $j;
+            }
+        }
+        @else if $j < $i {
+            #item-#{$i}:checked ~ .cards #card-#{$j} {
+                transform: translateX(110% * ($j - $i)) scale(1 + 0.1 * ($j - $i));
+                opacity: 1 + 0.2 * ($j - $i);
+                z-index: 2 - $j;
+            }
+        }
+    }
+  }
+  
+// }

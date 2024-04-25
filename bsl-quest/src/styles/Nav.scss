@@ -1,0 +1,72 @@
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 -0.1em 0.3em rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 0;
+    z-index: 999;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0.4em;
+    border-radius: 1em;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    text-align: center;
+    min-width: 20%;
+    justify-content: center;
+    flex-direction: column; // default to column
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+
+    &.active {
+        flex-direction: column;
+
+        svg {
+            margin-right: 0; // remove margin when active
+            margin-bottom: 0.2em;
+            
+        }
+
+        span {
+            display: block;
+            transition: opacity 0.3s; // Fade in/out the text
+            opacity: 1; // Fully opaque when active
+        }
+    }
+
+    &:hover {
+        color: #2b7dc9;
+    }
+}
+
+svg {
+    margin-right: 0.5em;
+    transition: margin 0.3s; 
+}
+
+.nav-item:hover span {
+    display: inline; 
+}
+
+.active {
+    background-color: rgba(223, 229, 234, 0.604); // bubble effect with a soft background color
+    padding: 0.3em 1em; 
+    border-radius: 1.3em; 
+    color: #2b7dc9;
+}
+
+.nav-item:not(.active) span {
+    opacity: 0; // fully transparent when not active
+    transition: opacity 0.3s; // fade in/out the text
+}

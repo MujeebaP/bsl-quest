@@ -1,0 +1,7 @@
+.avatar-selection img {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%; 
+    object-fit: cover;
+    padding: 3px;
+}

@@ -1,0 +1,74 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500; 
+    width: 100vw;
+}
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  rgba(255, 255, 255, 0.993); 
+    padding: 2em;
+    border-radius: 0.6em;
+    max-width: 30em;
+    width: 70%;
+    height: 15%;
+    box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.3); 
+    position: relative; 
+    padding: 1.5em;
+    height: auto;
+}
+
+.modal-message {
+    text-align: center;
+    flex-grow: 1;
+    padding: 1em 2em;
+}
+
+.modal-close {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    border: none;
+    background: transparent;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    color: #f00; 
+}
+
+.modal-close:hover {
+    color: #f00; 
+    transform: scale(1.1);
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: calc(100% - 40px); 
+    padding: 4%; 
+    margin-bottom: 5%; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+}
+
+button {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #6FB0F8; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 3%;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

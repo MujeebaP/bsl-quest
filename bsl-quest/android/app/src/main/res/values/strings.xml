@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BSL Quest</string>
+    <string name="title_activity_main">BSL Quest</string>
+    <string name="package_name">com.gmail.mujeeba03.myapp</string>
+    <string name="custom_url_scheme">com.gmail.mujeeba03.myapp</string>
+</resources>

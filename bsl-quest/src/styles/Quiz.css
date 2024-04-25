@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+.alphabetQuiz-container {
+    font-family: "DM Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em; 
+    position: relative;
+    max-height: 100%;
+    overflow: hidden;
+    margin-top: 2.4em;
+}
+
+/* .alphabetQuiz-container h1 {
+    margin-bottom: 1em; 
+} */
+
+.quiz-back-button {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    background: none;
+    border: none;
+    color: #333; 
+    font-size: 2.5em; 
+    cursor: pointer;
+    z-index: 60;
+
+}
+
+.alphabetQuiz-container video {
+    max-width: 85%;
+    border: 0.125em solid #ddd;
+    border-radius: 0.625em;
+    margin-bottom: 2em;
+}
+
+.alphabetQuiz-container .animalvideo {
+    max-width: 75%;
+    border: 0.125em solid #ddd;
+    border-radius: 0.625em;
+    margin-bottom: 2em;
+}
+
+.alphabetQuiz-container > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25em; 
+    width: 85%; 
+    margin-bottom: 1.4em; 
+}
+
+.option-button {
+    background-color: #f9f9f9;
+    border: 0.125em solid #ddd; 
+    border-radius: 0.625em;
+    padding: 1.4375em;
+    font-size: 1.125em;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    color: black;
+}
+
+.option-button:hover {
+    background-color: #f1f1f1;
+}
+
+.option-button:disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.option-button.correct {
+    background-color: rgb(5, 139, 5);
+    color: white;
+    border-color: rgb(5, 139, 5);
+}
+
+.option-button.incorrect {
+    background-color: #dc5345;
+    color: white;
+    border-color: #dc5345;
+}
+
+.alphabetQuiz-container .next-button {
+    width: 2.2em; 
+    height: 2.2em; 
+    border-radius: 50%;
+    padding: 0; 
+    margin: 0;
+    position: absolute;
+    bottom: 1.55em; 
+    right: 1em; 
+    background-color: #5fb4ff; 
+    color: white;
+    font-size: 1.5em; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border:none;
+    text-align: center;
+    z-index: 10;
+}
+
+.alphabetQuiz-container .next-button .fa-arrow-right {
+    display: inline-block; 
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%; 
+    left: 48%;
+}
+
+.alphabetQuiz-container .next-button:hover {
+    background-color: #3da0f5; 
+}
+
+.score-container {
+    position: relative;
+    display: inline-block;
+    /* bottom: 0; */
+    /* margin-top: 10%; */
+    left: 65%;
+    transform: translateX(-50%); 
+    width: auto;
+    text-align: center;
+    z-index: 5;
+}
+
+.score {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 0.5em 2em;
+    border-radius: 1em;
+    box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, color 0.3s;
+    position: relative; 
+    z-index: 3;
+}
+
+.score-container.streak::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 51%; 
+    bottom: 0; 
+    background-color: #ffd700; 
+    border-radius: 1em;
+    animation: pulse 2s infinite;
+    z-index: -1; 
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 1em rgba(255, 215, 0, 0); /* Adjust the size to control the pulse effect */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+    }
+}
